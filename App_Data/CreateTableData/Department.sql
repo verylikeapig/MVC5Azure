@@ -28,5 +28,5 @@ INSERT INTO [Department] ([DepartmentID],[Name],[Budget],[StartDate],[Instructor
 GO
 SET IDENTITY_INSERT [Department] OFF;
 GO
-ALTER TABLE [Department] ALTER COLUMN [DepartmentID] IDENTITY (8,1);
-GO
+DBCC CHECKIDENT ('Department', RESEED, 6);  
+GO 

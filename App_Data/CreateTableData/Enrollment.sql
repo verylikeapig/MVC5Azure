@@ -51,5 +51,5 @@ INSERT INTO [Enrollment] ([EnrollmentID],[CourseID],[StudentID],[Grade]) VALUES 
 GO
 SET IDENTITY_INSERT [Enrollment] OFF;
 GO
-ALTER TABLE [Enrollment] ALTER COLUMN [EnrollmentID] IDENTITY(12,1) --IDENTITY (1,1);
-GO
+DBCC CHECKIDENT ('Enrollment', RESEED, 12);  
+GO 

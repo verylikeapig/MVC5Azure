@@ -55,5 +55,5 @@ INSERT INTO [Person] ([ID],[LastName],[FirstName],[HireDate],[EnrollmentDate],[D
 GO
 SET IDENTITY_INSERT [Person] OFF;
 GO
-ALTER TABLE [Person] ALTER COLUMN [ID] IDENTITY (20,1);
+DBCC CHECKIDENT ('[Person]', RESEED, 20);
 GO

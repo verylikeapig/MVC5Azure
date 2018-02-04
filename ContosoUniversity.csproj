@@ -187,6 +187,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\ContosoUniversity.sdf" />
+    <Content Include="App_Data\ContosoUniversityMDF.mdf" />
+    <Content Include="App_Data\ContosoUniversityMDF_log.ldf">
+      <DependentUpon>ContosoUniversityMDF.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
@@ -263,7 +267,9 @@
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
     <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Damains\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
